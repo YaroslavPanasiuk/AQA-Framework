@@ -23,8 +23,8 @@ elements_names = {
 }
 
 
-@then('view "{text_field}" should be written in "{language}"')
-@step('view "{text_field}" should be written in "{language}"')
+@then('"{text_field}" should be written in "{language}"')
+@step('"{text_field}" should be written in "{language}"')
 def implement(context, text_field, language):
     match text_field:
         case "phone":

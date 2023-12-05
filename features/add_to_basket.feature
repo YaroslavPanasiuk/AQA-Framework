@@ -6,7 +6,7 @@ Feature: Example Feature
         And choose "default size" and "default color" options
         And click buy
         And go to basket
-        Then basket should have "1" item
+        Then basket should have "1" items
 
     Scenario: search for "Pet" and add second item to basket
         Given open website "http://opencart.qatestlab.net/"
