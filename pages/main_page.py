@@ -28,6 +28,7 @@ class MainPage:
         self.basket_button = (By.CLASS_NAME, 'btn-l')
         self.basket_popup = (By.XPATH, '//*[@id="cart"]/ul')
         self.table_of_items_in_basket = (By.XPATH, '//*[@id="content"]/form/div/table/tbody')
+        self.button_delete_from_basket = (By.XPATH, '//*[@id="content"]/form/div/table/tbody/tr/td[4]/div/span/button[2]')
 
     def get_title(self):
         return self.driver.title
@@ -82,6 +83,10 @@ class MainPage:
             if item in self.get_children(option)[0].text:
                 return option
         return None
+
+    def delete_item_from_basket(self):
+        self.driver.find_element(*self.button_delete_from_basket).click()
+        return 0
 
 
 def list_is_sorted(arr: [], order):
