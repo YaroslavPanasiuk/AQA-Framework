@@ -10,7 +10,7 @@ def open_website(context, path):
     context.base_page = BasePage(context.driver)
     context.driver.get(path)
     context.driver.get_cookies()
-    time.sleep(7)
+    time.sleep(15)
 
 
 @when('enter "{search_query}" in search field')

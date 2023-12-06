@@ -15,7 +15,7 @@ def implement(context, sort_by):
     button = context.base_page.choose_item_in_menu(options, sort_by)
     assert button is not None, f"no option '{sort_by}' found"
     button.click()
-    time.sleep(5)
+    time.sleep(10)
 
 
 @then('results should be sorted by "{sort_by}" "{order}"')
