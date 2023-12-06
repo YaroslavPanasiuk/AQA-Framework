@@ -28,4 +28,4 @@ Feature: Add items to basket
         And choose "default size" and "default color" options
         And click buy
         And go to basket
-        Then basket should have "2" items
+        Then basket should have "3" items
