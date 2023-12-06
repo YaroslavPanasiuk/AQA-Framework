@@ -1,4 +1,4 @@
-Feature: Example Feature
+Feature: Search
     Scenario: Search for "Корм"
         Given open website "http://opencart.qatestlab.net/"
         When enter "Корм" in search field

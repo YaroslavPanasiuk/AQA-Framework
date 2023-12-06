@@ -4,7 +4,7 @@ from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
 
-class BasePage:
+class MainPage:
     def __init__(self, driver):
         self.driver = driver
         self.text_input_locator = (By.NAME, 'search')
@@ -28,10 +28,6 @@ class BasePage:
         self.basket_button = (By.CLASS_NAME, 'btn-l')
         self.basket_popup = (By.XPATH, '//*[@id="cart"]/ul')
         self.table_of_items_in_basket = (By.XPATH, '//*[@id="content"]/form/div/table/tbody')
-
-
-    def open(self):
-        self.driver.get("https://www.example.com")
 
     def get_title(self):
         return self.driver.title

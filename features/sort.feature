@@ -1,4 +1,4 @@
-Feature: Example Feature
+Feature: Sort items
     Scenario: Sort by name ascending
         Given open website "http://opencart.qatestlab.net/"
         When enter "pet" in search field

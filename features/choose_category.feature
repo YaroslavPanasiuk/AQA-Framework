@@ -1,4 +1,4 @@
-Feature: Example Feature
+Feature: Choose category
     Scenario: Choose category "Dogs"
         Given open website "http://opencart.qatestlab.net/"
         When click on "Dogs" in menu

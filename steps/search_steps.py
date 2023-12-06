@@ -2,12 +2,12 @@ import time
 
 from behave import *
 from selenium.webdriver.common.by import By
-from pages.base_page import BasePage
+from pages.main_page import MainPage
 
 
 @given('open website "{path}"')
 def open_website(context, path):
-    context.base_page = BasePage(context.driver)
+    context.base_page = MainPage(context.driver)
     context.driver.get(path)
     context.driver.get_cookies()
     time.sleep(15)

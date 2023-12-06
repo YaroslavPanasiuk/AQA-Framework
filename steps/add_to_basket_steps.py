@@ -60,6 +60,6 @@ def implement(context):
 @then('basket should have "{items_count}" items')
 def implement(context, items_count):
     current_items_count = len(context.base_page.get_children(context.driver.find_element(*context.base_page.table_of_items_in_basket)))
-    assert int(items_count) == current_items_count, f"wrong items count: {items_count}\n Should be: {current_items_count}"
+    assert int(items_count) == current_items_count, f"wrong items count: {current_items_count}\n Should be: {items_count}"
     time.sleep(5)
 

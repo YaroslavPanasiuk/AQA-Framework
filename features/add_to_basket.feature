@@ -1,4 +1,4 @@
-Feature: Example Feature
+Feature: Add items to basket
     Scenario: search for "Pet" and add first item to basket
         Given open website "http://opencart.qatestlab.net/"
         When enter "Pet" in search field

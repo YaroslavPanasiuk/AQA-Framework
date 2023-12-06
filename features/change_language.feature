@@ -1,4 +1,4 @@
-Feature: Example Feature
+Feature: Change language
     Scenario: Change language to German
         Given open website "http://opencart.qatestlab.net/"
         When change language to "De"
@@ -11,7 +11,7 @@ Feature: Example Feature
         When change language to "Ua"
         Then "search" should be written in "Ukrainian"
         And "phone" should be written in "Ukrainian"
-        And "achedule" should be written in "Ukrainian"
+        And "schedule" should be written in "Ukrainian"
 
     Scenario: Change language to English
         Given open website "http://opencart.qatestlab.net/"

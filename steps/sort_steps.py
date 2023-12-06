@@ -4,7 +4,7 @@ from behave import *
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-from pages.base_page import list_is_sorted
+from pages.main_page import list_is_sorted
 logging.basicConfig(level=logging.INFO)
 
 
