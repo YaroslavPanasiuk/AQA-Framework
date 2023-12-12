@@ -10,6 +10,7 @@ def before_all(context: Context):
     chrome_options = webdriver.chrome.options.Options()
     chrome_options.binary_location = r"/usr/bin/google-chrome-stable"#r"C:\Drivers\chrome-win64\chrome.exe"
     chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
 
     firefox_options = webdriver.firefox.options.Options()
     firefox_options.binary_location = r"/usr/bin/firefox"
