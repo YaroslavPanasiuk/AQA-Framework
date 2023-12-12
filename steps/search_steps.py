@@ -26,5 +26,5 @@ def verify_search_results(context, search_term):
 
 
 @then('close browser')
-def close_browser(context):
+def close_browser(context: Context):
     context.driver.close()

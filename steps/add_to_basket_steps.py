@@ -54,14 +54,14 @@ def implement(context, item_size, item_color):
 
 @pytest.mark.run(order=3)
 @when('click buy')
-def implement(context):
+def implement(context: Context):
     context.driver.find_element(*context.base_page.buy_button).click()
     time.sleep(7)
 
 
 @pytest.mark.run(order=4)
 @when('go to basket')
-def implement(context):
+def implement(context: Context):
     context.driver.find_element(*context.base_page.basket_logo).click()
     time.sleep(1)
     cart_list = context.driver.find_element(*context.base_page.basket_popup)
@@ -82,7 +82,7 @@ def implement(context, items_count):
 
 @pytest.mark.run(order=6)
 @step('clear basket')
-def implement(context):
+def implement(context: Context):
     current_items_count = len(
         context.base_page.get_children(context.driver.find_element(*context.base_page.table_of_items_in_basket)))
     for i in range(current_items_count):
