@@ -14,6 +14,7 @@ def before_all(context: Context):
 
 
 def after_all(context: Context):
+    return
     context.driver.quit()
 
 
