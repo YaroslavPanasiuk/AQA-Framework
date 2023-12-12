@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"3cb07991fb1a6dfebe24abea10a346c1","name":"Example Feature","statistic":{"failed":5,"broken":2,"skipped":0,"passed":13,"unknown":0,"total":20}}]}
+{"total":2,"items":[{"uid":"8074428baf37692fe2424ad10bf6294a","name":"Add items to basket","statistic":{"failed":1,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":3}},{"uid":"71a11b92247f2553354bd0546253d3b8","name":"Change language","statistic":{"failed":1,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":3}}]}

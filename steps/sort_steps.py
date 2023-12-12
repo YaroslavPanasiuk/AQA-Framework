@@ -10,6 +10,7 @@ logging.basicConfig(level=logging.INFO)
 
 @when('select sort by "{sort_by}"')
 def implement(context, sort_by):
+    time.sleep(2)
     context.driver.find_element(*context.base_page.sort_popup).click()
     options = context.base_page.get_children(context.driver.find_element(*context.base_page.sort_options))
     button = context.base_page.choose_item_in_menu(options, sort_by)

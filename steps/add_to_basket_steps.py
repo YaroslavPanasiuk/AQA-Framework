@@ -1,12 +1,14 @@
 import time
 import logging
 
+import pytest
 from behave import *
 from selenium.common import NoSuchElementException
 
 logging.basicConfig(level=logging.INFO)
 
 
+@pytest.mark.run(order=1)
 @when('choose item #"{item_index}"')
 def implement(context, item_index):
     index = int(item_index)
@@ -16,6 +18,7 @@ def implement(context, item_index):
     time.sleep(15)
 
 
+@pytest.mark.run(order=2)
 @when('choose "{item_size}" and "{item_color}" options')
 def implement(context, item_size, item_color):
     context.driver.find_element(*context.base_page.size_selector).click()
@@ -49,12 +52,14 @@ def implement(context, item_size, item_color):
     time.sleep(5)
 
 
+@pytest.mark.run(order=3)
 @when('click buy')
 def implement(context):
     context.driver.find_element(*context.base_page.buy_button).click()
     time.sleep(7)
 
 
+@pytest.mark.run(order=4)
 @when('go to basket')
 def implement(context):
     context.driver.find_element(*context.base_page.basket_logo).click()
@@ -65,6 +70,7 @@ def implement(context):
     time.sleep(10)
 
 
+@pytest.mark.run(order=5)
 @then('basket should have "{items_count}" items')
 def implement(context, items_count):
     current_items_count = len(
@@ -74,6 +80,7 @@ def implement(context, items_count):
     time.sleep(5)
 
 
+@pytest.mark.run(order=6)
 @step('clear basket')
 def implement(context):
     current_items_count = len(
