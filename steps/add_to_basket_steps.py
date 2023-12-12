@@ -3,6 +3,7 @@ import logging
 
 import pytest
 from behave import *
+from behave.runner import Context
 from selenium.common import NoSuchElementException
 
 logging.basicConfig(level=logging.INFO)

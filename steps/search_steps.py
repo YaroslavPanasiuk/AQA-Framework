@@ -1,6 +1,7 @@
 import time
 
 from behave import *
+from behave.runner import Context
 from selenium.webdriver.common.by import By
 from pages.main_page import MainPage
 
