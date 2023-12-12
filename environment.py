@@ -7,12 +7,13 @@ import sys
 def before_all(context: Context):
     #sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8')
     chrome_options = Options()
-    #chrome_options.binary_location = r"C:\Drivers\chrome-win64\chrome.exe"
-    context.driver = webdriver.Firefox()
+    chrome_options.binary_location = r"C:\Drivers\chrome-win64\chrome.exe"
+    firefox_options = Options()
+    firefox_options.binary_location = r"/usr/bin/firefox"
+    context.driver = webdriver.Firefox(firefox_options)
 
 
 def after_all(context: Context):
-    return
-#    context.driver.quit()
+    context.driver.quit()
 
 
