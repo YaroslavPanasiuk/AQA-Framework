@@ -21,7 +21,6 @@ def implement(context, sort_by):
 
 @then('results should be sorted by "{sort_by}" "{order}"')
 def implement(context, sort_by, order):
-    assert False
     match sort_by:
         case "name":
             assert list_is_sorted(context.base_page.get_item_names(), order), f"not sorted by name {order}\nActual order: {context.base_page.get_item_names()}"
