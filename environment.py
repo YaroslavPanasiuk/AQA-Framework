@@ -12,10 +12,11 @@ def before_all(context: Context):
 
     firefox_options = webdriver.firefox.options.Options()
     firefox_options.binary_location = r"/usr/bin/firefox"
-    context.driver = webdriver.Firefox(options=firefox_options)
+    context.driver = webdriver.Chrome(options=chrome_options)
 
 
 def after_all(context: Context):
+    return
     context.driver.quit()
 
 
